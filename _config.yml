@@ -22,7 +22,7 @@ title: Riyas P
 description: "Portfolio"
 keywords: "riyas, riyasp, riyasyash, riyas p"
 url: riyasyash.github.io
-baseurl: ""
+baseurl: "/portfolio"
 
 repo: https://github.com/riyasyash
 disqus_shortname: "riyasyash"
