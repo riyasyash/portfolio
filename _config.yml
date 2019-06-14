@@ -1,0 +1,58 @@
+# Build settings
+permalink: /blog/:year/:title/
+markdown: kramdown
+highlighter: pygments
+plugins: [jekyll-paginate-v2,jekyll-gist]
+
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: "/page/:num/"
+
+comments: true
+
+source: source
+destination: _site
+sass:
+  sass_dir: _sass
+  style: compressed # expanded
+
+# SEO settings
+title: Riyas P
+description: "Portfolio"
+keywords: "riyas, riyasp, riyasyash, riyas p"
+url: https://riyasyash.me
+baseurl: ""
+
+repo: https://github.com/riyasyash
+disqus_shortname: "riyasyash"
+disqus_site_shortname: "riyashyash"
+site:
+  repo: https://github.com/riyasyash
+# Author settings
+author:
+  name: Riyas P
+  job: Software Developer and a Human
+  bio: "Solution consultant @ Sahaj Software Solutions PVT LTD"
+  thumb: /images/author.png
+  email: riyasyash@gmail.com
+  url: https://riyasyash.me/
+  github: https://github.com/riyasyash
+  twitter: https://twitter.com/riyasyash
+  # facebook: https://facebook.com/riyas.subair.73
+  medium: https://medium.com/@riyasyash
+  linkedin: https://linkedin.com/in/riyasyash
+  instagram: https://www.instagram.com/riyasyash/
+
+# navbar pages
+navbar:
+  - slug: about
+    title: About
+  - slug: blog
+    title: Blog
+
+exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.md", "Rakefile"]
+
+gist:
+  noscript: false
+  color: white
