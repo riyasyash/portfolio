@@ -18,8 +18,6 @@ Here, we will be implementing OAuth through Authorization Code (Yeah, there are 
 
 ## How is it working?
 <br>
-
-<!-- {% include image.html url="https://cdn-images-1.medium.com/max/1600/1*HcZ1gZ_7SbeY6V5h6N13Pw.jpeg" description="diagram depicting the authentication flow" %} -->
 <figure class="image"><center>
     <img src="https://cdn-images-1.medium.com/max/1600/1*HcZ1gZ_7SbeY6V5h6N13Pw.jpeg" alt="{{ diagram depicting the authentication flow}}">
     <figcaption>{{ "diagram depicting the authentication flow" }}</figcaption>
