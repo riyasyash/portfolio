@@ -151,3 +151,7 @@ def strtag(str_tags)
 
   return tags
 end
+
+task "assets:precompile" do
+  exec("jekyll build")
+end
