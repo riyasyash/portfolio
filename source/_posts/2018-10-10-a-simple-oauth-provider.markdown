@@ -49,7 +49,86 @@ We need to write functions to perform the following operations
 
 ## Let’s Look at the code
 
-{% gist 32180f78111b8cda15843a9b9094b560 %}
+```python
+class AuthorizationCode(models.Model):
+    client = models.ForeignKey(Client)
+    user = models.ForeignKey(User)
+    code = models.CharField(max_length=100, unique=True)
+    expires_at = models.DateTimeField()
+    class Meta:
+        managed = True
+    def generate_user_token(self):
+        try:
+            user = self.user
+            token = function_to_generate_token(user) // replace with the function to generate the token
+            self.invalidate()
+            return token
+        except:
+            return False
+
+    def invalidate(self):
+        self.expires_at = datetime.datetime.now(datetime.timezone.utc)
+        self.save()
+```
+
+```python
+class Client(models.Model):
+    client_id = models.CharField(
+        max_length=100, unique=True, default=generate_token, db_index=True
+    )
+    redirect_uri = models.TextField(
+        blank=True
+    )
+    error_uri = models.TextField(
+        blank=True
+    )
+    client_secret = models.CharField(
+        max_length=255, blank=True, default=generate_client_secret, db_index=True
+    )
+    name = models.CharField(max_length=255, blank=True)
+    class Meta:
+        managed = True
+    @classmethod
+    def generate_auth_token(cls, client_id, client_secret, authorization_code):
+        try:
+            client = cls.objects.get(client_id=client_id, client_secret=client_secret)
+            authorization_code = client.validate_auth_code(authorization_code)
+            if authorization_code:
+                return authorization_code.generate_user_token()
+            return False
+        except Exception as e:
+            return False
+
+    def validate_auth_code(self, authorization_code):
+        authorization_code = self.authorizationcode_set.filter(code=authorization_code,
+                                                                       expires_at__gte=datetime.datetime.now(
+                                                                           datetime.timezone.utc)).first()
+        return authorization_code
+```
+
+```python
+def generate_authorization_code(request, user):
+    client_id = request.data.get('client_id')
+    client = Client.objects.get(client_id=client_id)
+    if client:
+        authorization_code_data = create_authorization_code(request)
+        authorization_code_data.update({'user': user.id, 'client': client.id})
+        authorization_code_serializer = AuthorizationCodeSerializer(data=authorization_code_data)
+        authorization_code_serializer.is_valid()
+        authorization_code = authorization_code_serializer.save()
+        return Response({
+            'redirect_uri': client.redirect_uri,
+            'authorization_code': authorization_code.code
+        })
+def create_authorization_code(request):
+    """Generates an authorization grant represented as a dictionary."""
+    now = datetime.datetime.now(datetime.timezone.utc)
+    expires_at = now+datetime.timedelta(minutes=10)
+    grant = {'code': generate_token(),'expires_at':expires_at}
+    if hasattr(request, 'state') and request.state:
+        grant['state'] = request.state
+    return
+```
 
 The functions generate_client_secret() and generate_token() can be any method that generates a random string with a length satisfying OAuth specification. The function_to_generate_token() has to be replaced with whatever you are using to generate user tokens (in my case it is JWT).
 
