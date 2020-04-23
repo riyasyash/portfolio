@@ -51,7 +51,7 @@ To simplify the process of monitoring services in a Kubernetes cluster, the Prom
 
 <br>
 <figure class="image"><center>
-    <img src="https://miro.medium.com/max/1400/1*6KI8wlyWwLwPYgt_SP1CCA.png" alt="{{ src: https://coreos.com/operators/prometheus/docs/latest/user-guides/getting-started.html}}">
+    <img src="https://miro.medium.com/max/1400/1*6KI8wlyWwLwPYgt_SP1CCA.png" alt="src: https://coreos.com/operators/prometheus/docs/latest/user-guides/getting-started.html">
     <figcaption>{{ "src: https://coreos.com/operators/prometheus/docs/latest/user-guides/getting-started.html" }}</figcaption>
 </center>
   </figure>
