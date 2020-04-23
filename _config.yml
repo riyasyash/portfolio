@@ -56,3 +56,5 @@ exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.
 gist:
   noscript: false
   color: white
+
+theme: jekyll-theme-cayman
