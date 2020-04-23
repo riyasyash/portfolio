@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Setting up SSH access from local machine to Google Cloud Compute engine</title>
+<meta name="description" content="I am very much used to aws and I love the easiness of working with pem files and accessing the ec2 instances over ssh. Today I was trying to play around with...">
+
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="canonical" href="riyasyash.github.io/blog/2018/ssh-to-google-cloud-machine/">
+<link rel="alternate" type="application/rss+xml" title="Riyas P" href="riyasyash.github.io/feed.xml" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+</head>
+<body>
+  <header class="site-header">
+  <div class="container">
+    <input type="checkbox" id="toggleNavbar">
+    <h1 class="logo"><a href="/"><span></span> <small></small></a></h1>
+    <label for="toggleNavbar" role="button" class="toggle-navbar-button">
+      <i class="icon icon-menu"></i>
+      <i class="icon icon-cross"></i>
+    </label>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/" title="Home">Home</a></li>
+        
+          <li><a href="/about" title="About">About</a></li>
+        
+          <li><a href="/blog" title="Blog">Blog</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main class="main-container">
+  <div class="container">
+    <article role="article" class="post">
+
+  <div class="card">
+    <header class="post-header">
+      <h1 class="post-title">Setting up SSH access from local machine to Google Cloud Compute engine</h1>
+      <em class="post-meta">
+        <time>Oct 5, 2018</time>
+      </em>
+    </header>
+
+    <div class="post-content">
+      
+        <figure class="post-thumbnail ">
+          <img src="https://cdn-images-1.medium.com/max/1600/1*eWYm3Dm7s0t8lLWYRW4pow.jpeg" alt="Setting up SSH access from local machine to Google Cloud Compute engine">
+        </figure>
+      
+      <p>I am very much used to aws and I love the easiness of working with pem files and accessing the ec2 instances over ssh. Today I was trying to play around with Google Cloud Platform. It is very easy to bring up a compute engine (similar to aws ec2). Also the dashboard was similar to aws (but if you are used to aws terminology you might stumble across all the options google has).</p>
+
+<p>After setting up the instance I was going to connect from my local machine to the compute engine and then only I realised the absence of pem files, I didn’t create any!, because they didn’t prompt for one, because they don’t have the concept of one.</p>
+
+<p>They do have a button in the machine’s row on the compute engine dashboard called SSH. When you click on that, a new browser window will popup with a terminal on it. This is a fully functional terminal which you can use to setup, debug and monitor your compute engine. But I was not satisfied with it and I needed a way to use my local machine to connect to the compute engine (not through a browser window). Another reason I wanted it so badly was because it is easy to setup.</p>
+
+<h2 id="lets-set-it-up">Let’s set it up!</h2>
+
+<p>I would like to split the entire process in to two sections, one to be performed on the local machine and the other on the Google Cloud Platform console.</p>
+
+<p><b>On your local machine:</b></p>
+
+<ol>
+  <li>Open Terminal.</li>
+  <li><code>$ ssh-keygen -t rsa -C [username] </code>
+    <ul>
+      <li>replace [username] with the value you need.</li>
+      <li>It will prompt you for a directory to place the files that are going to get generated (you can just hit ENTER and keep it to default).</li>
+      <li>Then it will prompt you for a passphrase (you can also hit ENTER and opt not to set a passphrase, but I would recommend it. Also I would recommend to remember it 😉).</li>
+      <li>If it is done there will be to new files generated under the directory you opted, by default it will be under ‘.ssh/’ and will be named id_rsa and id_rsa.pub, this is a private-public key pair.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>Now copy the id_rsa.pub (public key) and head over to the next section.</p>
+
+<h2 id="on-google-cloud-console">On Google cloud console:</h2>
+
+<ol>
+  <li>Login to your account</li>
+  <li>Navigate to Compute Engine section</li>
+  <li>Select Metadata from the left side pane</li>
+  <li>Click on Edit</li>
+  <li>Click Add item and then paste the public key in to text box and hit Save.</li>
+  <li>Again select the option VM Instances from left pane</li>
+  <li>From the dashboard choose your machine</li>
+  <li>Click Edit</li>
+  <li>Under the section SSH Keys select show and edit and paste the public key again in the text box and hit Save</li>
+</ol>
+
+<p>If everything is done right, you will be able to ssh in to the compute engine from your local machine 😎by <code>$ ssh -i id_rsa [username]@[public ip]</code></p>
+
+
+    </div>
+
+    
+<hr>
+
+<aside id="comments" class="disqus">
+  <h3><i class="icon icon-comments-o"></i> Comments</h3>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function() {
+      this.page.url = 'riyasyash.github.io/blog/2018/ssh-to-google-cloud-machine/';
+      this.page.identifier = '/blog/2018/ssh-to-google-cloud-machine';
+    };
+    (function() {
+      var d = document,
+      s = d.createElement('script');
+      s.src = '//riyashyash.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</aside>
+
+
+  </div>
+
+</article>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <ul class="social">
+  <li><a href="https://github.com/riyasyash" target="_blank"><i class="icon icon-github"></i></a></li>
+  <li><a href="https://twitter.com/riyasyash" target="_blank"><i class="icon icon-twitter"></i></a></li>
+  <li><a href="https://medium.com/@riyasyash" target="_blank"><i class="fa fa-medium"></i></a></li>
+  <li><a href="https://linkedin.com/in/riyasyash" target="_blank"><i class="icon icon-linkedin"></i></a></li>
+  <li><a href="https://www.instagram.com/riyasyash/" target="_blank"><i class="icon icon-instagram"></i></a></li>
+</ul>
+    <p class="txt-medium-gray">
+      <small>&copy;2020 All rights reserved.</small>
+    </p>
+  </div>
+</footer>
+
+
+  <a href="https://github.com/riyasyash" target="_blank" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#337ab7; color:#fff; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142422878-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142422878-1');
+</script>
+
+</body>
+</html>
