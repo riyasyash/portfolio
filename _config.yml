@@ -6,7 +6,7 @@ plugins: [jekyll-paginate-v2,jekyll-gist]
 
 pagination:
   enabled: true
-  per_page: 3
+  per_page: 10
   permalink: "/page/:num/"
 
 comments: true
@@ -21,7 +21,7 @@ sass:
 title: Riyas P
 description: "Portfolio"
 keywords: "riyas, riyasp, riyasyash, riyas p"
-url: https://riyasyash.me
+url: riyasyash.github.io
 baseurl: ""
 
 repo: https://github.com/riyasyash
