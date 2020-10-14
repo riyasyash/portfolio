@@ -1,0 +1,30 @@
+---
+layout: pages
+---
+<section class="post-list">
+  {% for item in site.lab %}
+  <article class="post">
+    <figure class="post-thumbnail {% if item.img %}{% else %}no-image{% endif %}">
+      <a href="{{ item.url }}" target="_blank">
+        {% if item.img %}
+        <img src="{{ item.img }}" alt="{{ item.name }}">
+        {% endif %}
+      </a>
+    </figure>
+    <div class="post-content">
+      <header class="post-header">
+        <h1 class="post-title">
+          <a class="post-link" href="{{ item.url }}" target="_blank">{{ item.name }}</a>
+        </h1>
+        <em class="post-meta">
+          {% if item.code %}
+          <a href="{{ item.code }}" alt="{{ item.code }}" target="_blank"> <i class="icon icon-github"></i></a>
+          {% endif %}
+        </em>
+      </header>
+      <p>{{ item.description | strip_html | truncatewords: 30  }}
+      </p>
+    </div>
+  </article>
+  {% endfor %}
+</section>

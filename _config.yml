@@ -37,6 +37,7 @@ author:
   thumb: /images/author.png
   email: riyasyash@gmail.com
   url: https://riyasyash.me/
+  gitlab: https://gitlab.com/riyasyash
   github: https://github.com/riyasyash
   twitter: https://twitter.com/riyasyash
   # facebook: https://facebook.com/riyas.subair.73
@@ -50,9 +51,17 @@ navbar:
     title: About
   - slug: blog
     title: Blog
+  - slug: lab
+    title: Lab
 
 exclude: ["config.rb", "src", "Gemfile", "Gemfile.lock", "package.json","README.md", "Rakefile"]
 
 gist:
   noscript: false
   color: white
+lab:
+  - name: Shrink Ray
+    description: A URl shortening service written in Golang and presented via Angular
+    url: https://shrinkray.riyasyash.me
+    img: https://github.com/riyasyash/shrink-ray/raw/master/Screenshot.png
+    code: https://github.com/riyasyash/shrink-ray
