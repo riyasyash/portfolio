@@ -10,4 +10,5 @@ category: tech
 tags:
 - tech
 external: https://blog.lightwing.io/aws-spot-instances-along-with-route-53/
+source: lightwing blog
 ---
