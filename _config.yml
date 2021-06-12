@@ -32,7 +32,7 @@ site:
 # Author settings
 author:
   name: Riyas P
-  job: I build 'stuff' with
+  job: I build 'stuff' with tech
   bio: "Fullstack Developer @ Lightwing.io"
   thumb: /images/author.png
   email: riyasyash@gmail.com
@@ -73,7 +73,7 @@ lab:
     code: https://github.com/riyasyash/heimdallr
     tools: ["Python","Flutter","Dart"]
   - name: Portfolio
-    description: My personal portfolio website
+    description: This is my personal portfolio website
     url: https://riyasyash.me
     # img: https://picsum.photos/200/300?grayscale&&blur=4
     code: https://github.com/riyasyash/portfolio
