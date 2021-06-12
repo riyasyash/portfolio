@@ -84,10 +84,42 @@ experience:
     org: "Sahaj Software Solutions PVT LTD"
     org_url: "https://sahaj.ai"
     position: "Solution Consultant"
+    description: Sahaj had a lot to offer in terms of quality of both work and colleagues. I am happy that I started my career with such a niche service startup.
+    work:
+      - title: A full-fledged publication system
+        description: A publication system backend powered by Python based microservices, where a project and its associated chunks, assets, e.t.c can be
+          created edited and versioned. multiple microservices can be dynamically stitched together to
+          form workflows in a publication system based on the requirements of the document to be
+          published.
+        tools: [Python, Flask, RoR, MySQL, RabbitMQ, Ansible, Terraform, Jenkins]
+      - title: A Sales and Hiring Enablement platform
+        description: A b2b platform where, sales and hiring enablement data visualizations and reports can be
+          availed, filtered, and searched at various levels based on the levels of user subscriptions. Oauth
+          provider to authenticate with client applications with the platform login, so that the data
+          available to the user can be accessed through client applications.
+        tools: [Python, django-rest-framework, Postgresql, elastic-search, celery, Redis]
+      - title: A platform to create and deploy data science solutions
+        description: A Jupyter powered b2b platform where you can write code in any Jupyter supported
+          language, to solve a data science problem and package the solution as a deployable docker
+          image.
+        tools: [Python, Flask, RabbitMQ, Jupyter, docker, Ansible, Jenkins]
+      - title: A Connected Vehicle Platform
+        description: A consumer-facing application where the telemetry data from vehicle(s) owned by the users are
+          collected, and reports and inferences are provided based on the vehicle and usage type.
+        tools: [Kafka, Cassandra, Postgresql, Kubernetes, Docker, Terraform, Ansible, AWS, Kong]
+
   - start_date: "Aug 2020"
     org: "Lightwing"
     org_url: "https://lightwing.io"
     position: "Fullstack Developer"
+    description: As an early stage startup in the cloud cost optimization business and being one of the earliest developers in the organization this is exciting and challenging.
+      Have the opportunity to interact with the end users to umderstand their varied usecases and problems to build and shape the product which makes enormous impacts on the way they use the cloud.
+    work:
+      - title: Lightwing features
+        description: such as Autostopping, Computegroups and Managed VMs
+        tools: [Go, React, AWS, Azure, Kubernetes, Redis, Faktory, Postgres]
+    
+
   # - start_date: "Nov 2020"
   #   org: "Harness R&D Labs India"
   #   org_url: "https://harness.io"
