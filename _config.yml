@@ -65,3 +65,27 @@ lab:
     url: https://shrinkray.riyasyash.me
     img: https://github.com/riyasyash/shrink-ray/raw/master/Screenshot.png
     code: https://github.com/riyasyash/shrink-ray
+    tools: ["Go","Angular","HTML","CSS"]
+
+
+  - name: Portfolio
+    description: My personal portfolio website
+    url: https://riyasyash.me
+    # img: https://picsum.photos/200/300?grayscale&&blur=4
+    code: https://github.com/riyasyash/portfolio
+    tools: ["Jekyll","HTML","CSS"]
+
+experience:
+  - start_date: "May 2016"
+    org: "Sahaj Software Solutions PVT LTD"
+    org_url: "https://sahaj.ai"
+    position: "Solution Consultant"
+  - start_date: "Aug 2020"
+    org: "Lightwing"
+    org_url: "https://lightwing.io"
+    position: "Fullstack Developer"
+  - start_date: "Nov 2020"
+    org: "Harness R&D Labs India"
+    org_url: "https://harness.io"
+    position: "Software Engineer"
+  
