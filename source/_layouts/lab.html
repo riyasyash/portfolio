@@ -24,7 +24,15 @@ layout: pages
       </header>
       <p>{{ item.description | strip_html | truncatewords: 30  }}
       </p>
+      <div class="md-chips">
+        {% for tool in item.tools %}
+        <div class="md-chip">
+         {{tool}}
+        </div>
+        {% endfor %}
+      </div>
     </div>
+    
   </article>
   {% endfor %}
 </section>
