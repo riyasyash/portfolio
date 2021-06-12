@@ -66,8 +66,12 @@ lab:
     img: https://github.com/riyasyash/shrink-ray/raw/master/Screenshot.png
     code: https://github.com/riyasyash/shrink-ray
     tools: ["Go","Angular","HTML","CSS"]
-
-
+  - name: HeimdallR
+    description: A raspberry-pi based smart surveillance assistant
+    url: https://riyasyash.me
+    # img: https://picsum.photos/200/300?grayscale&&blur=4
+    code: https://github.com/riyasyash/heimdallr
+    tools: ["Python","Flutter","Dart"]
   - name: Portfolio
     description: My personal portfolio website
     url: https://riyasyash.me
