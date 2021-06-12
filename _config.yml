@@ -88,8 +88,8 @@ experience:
     org: "Lightwing"
     org_url: "https://lightwing.io"
     position: "Fullstack Developer"
-  - start_date: "Nov 2020"
-    org: "Harness R&D Labs India"
-    org_url: "https://harness.io"
-    position: "Software Engineer"
+  # - start_date: "Nov 2020"
+  #   org: "Harness R&D Labs India"
+  #   org_url: "https://harness.io"
+  #   position: "Software Engineer"
   
