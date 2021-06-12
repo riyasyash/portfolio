@@ -14,6 +14,7 @@ layout: pages
 
 </article>
 {% if page.title =="About" %}
+<article role="article" class="page card">
 <h1 class="post-title">Experience</h1>
 <div class="container">
   <div class="rightbox">
@@ -30,7 +31,7 @@ layout: pages
           {% if item.work %}
             <div class="item-subtitle">Work</div>
             {% for w in item.work %}
-              <div class="item-subheading">{{w.title}}:</div>
+              <div class="item-subheading"><u>{{w.title}}:</u></div>
               <div class="item-description">{{w.description}}</div>
               <div class="md-chips">
                 {% for tool in w.tools %}
@@ -48,4 +49,5 @@ layout: pages
     </div>
   </div>
 </div>
+</article>
 {% endif %}

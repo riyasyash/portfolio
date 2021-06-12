@@ -80,7 +80,7 @@ lab:
     tools: ["Jekyll","HTML","CSS"]
 
 experience:
-  - start_date: "May 2016"
+  - start_date: "May 2016 - July 2020"
     org: "Sahaj Software Solutions PVT LTD"
     org_url: "https://sahaj.ai"
     position: "Solution Consultant"
@@ -108,12 +108,12 @@ experience:
           collected, and reports and inferences are provided based on the vehicle and usage type.
         tools: [Kafka, Cassandra, Postgresql, Kubernetes, Docker, Terraform, Ansible, AWS, Kong]
 
-  - start_date: "Aug 2020"
+  - start_date: "Aug 2020 - Present"
     org: "Lightwing"
     org_url: "https://lightwing.io"
     position: "Fullstack Developer"
-    description: As an early stage startup in the cloud cost optimization business and being one of the earliest developers in the organization this is exciting and challenging.
-      Have the opportunity to interact with the end users to umderstand their varied usecases and problems to build and shape the product which makes enormous impacts on the way they use the cloud.
+    description: Being one of the earliest developers in an early stage startup in the cloud cost optimization space is exciting and challenging.
+      I have the opportunity to interact with the end users to understand their varied usecases and problems to build and shape a product which makes enormous impacts on their cloud usage.
     work:
       - title: Lightwing features
         description: such as Autostopping, Computegroups and Managed VMs
