@@ -33,7 +33,7 @@ site:
 author:
   name: Riyas P
   job: I build 'cool stuff' with tech
-  bio: "Fullstack Developer @ Lightwing.io"
+  bio: "Software Engineer @ Harness.io"
   thumb: /images/author.png
   email: riyasyash@gmail.com
   url: https://riyasyash.me/
@@ -117,11 +117,15 @@ experience:
     work:
       - title: Lightwing features
         description: such as Autostopping, Computegroups and Managed VMs
-        tools: [Go, React, AWS, Azure, Kubernetes, Redis, Faktory, Postgres]
+        tools: [Go, React, AWS, Azure, Kubernetes, Redis, Faktory, Postgres, Terraform, Kubernetes Operator]
     
-
-  # - start_date: "Nov 2020"
-  #   org: "Harness R&D Labs India"
-  #   org_url: "https://harness.io"
-  #   position: "Software Engineer"
+  - start_date: "Nov 2020"
+    org: "Harness R&D Labs India"
+    org_url: "https://harness.io"
+    position: "Software Engineer"
+    description: Lightwing got acquired by Harness, and we continue to build the next generation of cloud cost optimization
+    work:
+      - title: Cloud Cost Optimization 2.0
+        description: Autostopping for Kubernetes workloads
+        tools: [Go, React, AWS, Azure, Kubernetes, Redis, Faktory, Postgres, Terraform, Kubernetes Operator]
   
