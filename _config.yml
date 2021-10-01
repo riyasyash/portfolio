@@ -126,6 +126,9 @@ experience:
     description: Lightwing got acquired by Harness, and we continue to build the next generation of cloud cost optimization
     work:
       - title: Cloud Cost Optimization 2.0
-        description: Autostopping for Kubernetes workloads
-        tools: [Go, React, AWS, Azure, Kubernetes, Redis, Faktory, Postgres, Terraform, Kubernetes Operator]
+        description: Integrating Lightwing AutoStopping feature to Harness platform to work with a really large scale and resilience 
+        tools: [Go, React, AWS, Azure, Redis, Faktory, Postgres, Terraform]
+      - title: AutoStopping for Kubernetes Workloads  
+        description: Developed the AutoStopping functionality for Kubernetes workloads from the ground up.
+        tools: [Go, React, Kubernetes, Redis, Faktory, Postgres, Kubernetes Operator]
   
