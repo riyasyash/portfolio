@@ -33,7 +33,7 @@ site:
 author:
   name: Riyas P
   job: I build 'cool stuff' with tech
-  bio: "Software Engineer @ Harness.io"
+  bio: "Senior Software Engineer @ Harness.io"
   thumb: /images/author.png
   email: riyasyash@gmail.com
   url: https://riyasyash.me/
@@ -108,7 +108,7 @@ experience:
           collected, and reports and inferences are provided based on the vehicle and usage type.
         tools: [Kafka, Cassandra, Postgresql, Kubernetes, Docker, Terraform, Ansible, AWS, Kong]
 
-  - start_date: "Aug 2020 - Present"
+  - start_date: "Aug 2020 - Nov 2020"
     org: "Lightwing"
     org_url: "https://lightwing.io"
     position: "Fullstack Developer"
@@ -119,11 +119,23 @@ experience:
         description: such as Autostopping, Computegroups and Managed VMs
         tools: [Go, React, AWS, Azure, Kubernetes, Redis, Faktory, Postgres, Terraform, Kubernetes Operator]
     
-  - start_date: "Nov 2020"
+  - start_date: "Nov 2020 - Nov 2021"
     org: "Harness R&D Labs India"
     org_url: "https://harness.io"
     position: "Software Engineer"
     description: Lightwing got acquired by Harness, and we continue to build the next generation of cloud cost optimization
+    work:
+      - title: Cloud Cost Optimization 2.0
+        description: Integrating Lightwing AutoStopping feature to Harness platform to work with a really large scale and resilience 
+        tools: [Go, React, AWS, Azure, Redis, Faktory, Postgres, Terraform]
+      - title: AutoStopping for Kubernetes Workloads  
+        description: Developed the AutoStopping functionality for Kubernetes workloads from the ground up.
+        tools: [Go, React, Kubernetes, Redis, Faktory, Postgres, Kubernetes Operator]
+  - start_date: "Nov 2021 - Present"
+    org: "Harness R&D Labs India"
+    org_url: "https://harness.io"
+    position: "Senior Software Engineer"
+    description: Continueing to build the next generation of cloud cost optimization
     work:
       - title: Cloud Cost Optimization 2.0
         description: Integrating Lightwing AutoStopping feature to Harness platform to work with a really large scale and resilience 
