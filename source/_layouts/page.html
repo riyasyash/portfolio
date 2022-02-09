@@ -26,7 +26,13 @@ layout: pages
             {{ item.start_date }}
           </div>
           <div class="item-title"><a href="{{item.org_url}}" target="_blank">{{ item.org }}</a></div>
+          {% if item.roles|length > 0 %}
+            {% for r in item.roles %}
+              <div class="item-subtitle">{{ r.position }}</div><div class="item-subsubtitle">{{ r.start_date }}</div>
+            {% endfor %}
+          {% else %}
           <div class="item-subtitle">{{ item.position }}</div>
+          {% endif %}
           <div class="item-description">{{item.description}}</div>
           {% if item.work %}
             <div class="item-subtitle">Work</div>

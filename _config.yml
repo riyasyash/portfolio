@@ -80,6 +80,45 @@ lab:
     tools: ["Jekyll","HTML","CSS"]
 
 experience:
+  - start_date: "Nov 2020 - Present"
+    org: "Harness R&D Labs India"
+    org_url: "https://harness.io"
+    position: "Senior Software Engineer"
+    description: Lightwing got acquired by Harness, and we continue to build the next generation of cloud cost optimization
+    roles:
+      - position: "Senior Software Engineer"
+        start_date: "Nov 2021 - Present"
+      - position: "Software Engineer"
+        start_date: "Nov 2020 - Nov 2021"
+    work:
+      - title: Cloud Cost Optimization 2.0
+        description: Integrating Lightwing AutoStopping feature to Harness platform to work with a really large scale and resilience 
+        tools: [Go, React, AWS, Azure, Redis, Faktory, Postgres, Terraform]
+      - title: AutoStopping for Kubernetes Workloads  
+        description: Developed the AutoStopping functionality for Kubernetes workloads from the ground up.
+        tools: [Go, React, Kubernetes, Redis, Faktory, Postgres, Kubernetes Operator]
+  # - start_date: "Nov 2020 - Nov 2021"
+  #   org: "Harness R&D Labs India"
+  #   org_url: "https://harness.io"
+  #   position: "Software Engineer"
+  #   description: Lightwing got acquired by Harness, and we continue to build the next generation of cloud cost optimization
+  #   work:
+  #     - title: Cloud Cost Optimization 2.0
+  #       description: Integrating Lightwing AutoStopping feature to Harness platform to work with a really large scale and resilience 
+  #       tools: [Go, React, AWS, Azure, Redis, Faktory, Postgres, Terraform]
+  #     - title: AutoStopping for Kubernetes Workloads  
+  #       description: Developed the AutoStopping functionality for Kubernetes workloads from the ground up.
+  #       tools: [Go, React, Kubernetes, Redis, Faktory, Postgres, Kubernetes Operator]
+  - start_date: "Aug 2020 - Nov 2020"
+    org: "Lightwing"
+    org_url: "https://lightwing.io"
+    position: "Fullstack Developer"
+    description: Being one of the earliest developers in an early stage startup in the cloud cost optimization space is exciting and challenging.
+      I have the opportunity to interact with the end users to understand their varied usecases and problems to build and shape a product which makes enormous impacts on their cloud usage.
+    work:
+      - title: Lightwing features
+        description: such as Autostopping, Computegroups and Managed VMs
+        tools: [Go, React, AWS, Azure, Kubernetes, Redis, Faktory, Postgres, Terraform, Kubernetes Operator]
   - start_date: "May 2016 - July 2020"
     org: "Sahaj Software Solutions PVT LTD"
     org_url: "https://sahaj.ai"
@@ -108,39 +147,8 @@ experience:
           collected, and reports and inferences are provided based on the vehicle and usage type.
         tools: [Kafka, Cassandra, Postgresql, Kubernetes, Docker, Terraform, Ansible, AWS, Kong]
 
-  - start_date: "Aug 2020 - Nov 2020"
-    org: "Lightwing"
-    org_url: "https://lightwing.io"
-    position: "Fullstack Developer"
-    description: Being one of the earliest developers in an early stage startup in the cloud cost optimization space is exciting and challenging.
-      I have the opportunity to interact with the end users to understand their varied usecases and problems to build and shape a product which makes enormous impacts on their cloud usage.
-    work:
-      - title: Lightwing features
-        description: such as Autostopping, Computegroups and Managed VMs
-        tools: [Go, React, AWS, Azure, Kubernetes, Redis, Faktory, Postgres, Terraform, Kubernetes Operator]
+  
     
-  - start_date: "Nov 2020 - Nov 2021"
-    org: "Harness R&D Labs India"
-    org_url: "https://harness.io"
-    position: "Software Engineer"
-    description: Lightwing got acquired by Harness, and we continue to build the next generation of cloud cost optimization
-    work:
-      - title: Cloud Cost Optimization 2.0
-        description: Integrating Lightwing AutoStopping feature to Harness platform to work with a really large scale and resilience 
-        tools: [Go, React, AWS, Azure, Redis, Faktory, Postgres, Terraform]
-      - title: AutoStopping for Kubernetes Workloads  
-        description: Developed the AutoStopping functionality for Kubernetes workloads from the ground up.
-        tools: [Go, React, Kubernetes, Redis, Faktory, Postgres, Kubernetes Operator]
-  - start_date: "Nov 2021 - Present"
-    org: "Harness R&D Labs India"
-    org_url: "https://harness.io"
-    position: "Senior Software Engineer"
-    description: Continueing to build the next generation of cloud cost optimization
-    work:
-      - title: Cloud Cost Optimization 2.0
-        description: Integrating Lightwing AutoStopping feature to Harness platform to work with a really large scale and resilience 
-        tools: [Go, React, AWS, Azure, Redis, Faktory, Postgres, Terraform]
-      - title: AutoStopping for Kubernetes Workloads  
-        description: Developed the AutoStopping functionality for Kubernetes workloads from the ground up.
-        tools: [Go, React, Kubernetes, Redis, Faktory, Postgres, Kubernetes Operator]
+  
+  
   

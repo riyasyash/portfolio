@@ -511,6 +511,11 @@ ul.rb li .timestamp {
   padding-top: 2%;
   color: #636363;
   font-size: large;
+  font-weight: 500;
+}
+.item-subsubtitle {
+  color: #636363;
+  font-size: medium;
 }
 .item-subheading {
   padding-top: 2%;
@@ -519,6 +524,7 @@ ul.rb li .timestamp {
   font-weight: 450;
 }
 .item-description {
+  padding-top: 2%;
   color: #636363;
   font-size: 16px;
 }
